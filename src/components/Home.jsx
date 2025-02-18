@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactTyped } from "react-typed";
+import "../assets/css/home.css";
 
 
 export default function Home() {
@@ -16,7 +17,6 @@ export default function Home() {
                     loop
                 />
             </div>
-
         </div>
     );
 }
