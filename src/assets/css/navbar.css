@@ -7,52 +7,119 @@
     background-color: transparent;
     padding: 10px 20px;
     z-index: 1000;
-    margin-top: 10px;
-  }
-  
-  .navbar-logo {
+    width: 100%;
+    top: 0;
+}
+
+.navbar-logo {
     width: auto;
-    /* Ensure the container doesn't constrain the logo's size */
     height: auto;
-    position: absolute;
-  }
-  
-  .navbar-logo img {
-    margin-top: 40px;
+    position: relative;
+}
+
+.navbar-logo img {
     width: 200px;
-    /* Adjust the width of the logo */
     height: auto;
-    /* Maintain the aspect ratio */
     max-height: 150px;
-    /* Optionally limit the maximum height */
-  }
-  
-  .logo-accent {
+}
+
+.logo-accent {
     color: #000;
-  }
-  
-  .navbar-links {
+}
+
+.navbar-links {
     display: flex;
     list-style: none;
-    margin-left: 180%;
     padding: 0;
-  }
-  
-  .navbar-links li {
+    margin-right: 460px;
+    margin-top: -50px;
+}
+
+.navbar-links li {
     margin: 0 15px;
-  }
-  
-  .navbar-links a {
+}
+
+.navbar-links a {
     text-decoration: none;
     font-size: 1.1rem;
     color: black;
     font-weight: bold;
     transition: color 0.3s ease;
-  }
-  
-  .navbar-links a:hover {
+}
+
+.navbar-links a:hover {
     color: #1382c7;
-    /* Change to any highlight color */
-  }
-  
-  
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar-logo {
+        margin-bottom: 10px;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        display: none;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-links li {
+        margin: 10px 0;
+    }
+
+    .navbar-links a {
+        font-size: 1rem;
+    }
+
+    .menu-icon {
+        display: flex;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        align-items: self-end;
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        padding: 10px;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .navbar-logo img {
+        width: 150px;
+    }
+
+    .navbar-links a {
+        font-size: 0.9rem;
+    }
+}

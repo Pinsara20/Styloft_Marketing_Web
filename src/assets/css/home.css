@@ -77,10 +77,12 @@ body {
 .sign-in-button, .community {
     text-align: center;
 }
-.sign-in-button .modern-button{
+
+.sign-in-button .modern-button {
     color: white;
 }
-.community .modern-button{
+
+.community .modern-button {
     background-color: aliceblue;
     color: #ff3b2f;
 }
@@ -109,4 +111,58 @@ body {
 
 .modern-button:active {
     transform: translateY(2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .intro {
+        margin-left: 10%;
+        margin-bottom: 50px;
+    }
+
+    .intro h1 {
+        font-size: 4rem;
+    }
+
+    .typed-text {
+        margin-top: 40px;
+        font-size: 1.5rem;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+        margin-top: -150px;
+        margin-left: 10%;
+    }
+
+    .modern-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro {
+        margin-left: 5%;
+        margin-bottom: 30px;
+    }
+
+    .intro h1 {
+        font-size: 3rem;
+    }
+
+    .typed-text {
+        margin-top: 30px;
+        font-size: 1.2rem;
+    }
+
+    .home-buttons {
+        margin-top: -100px;
+        margin-left: 5%;
+    }
+
+    .modern-button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
 }
