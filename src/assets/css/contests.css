@@ -10,9 +10,23 @@
     --spacing-large: 40px;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .contacts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     margin-top: var(--spacing-medium);
+    padding: var(--spacing-medium);
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contacts-title {
@@ -21,21 +35,25 @@
     margin-top: var(--spacing-medium);
 }
 
-.contacts-description {
-    font-size: var(--font-size-small);
-    margin: var(--spacing-medium) 0;
-}
-
 .contacts-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: var(--spacing-medium) 0;
+    margin-left: -850px;
+    width: 100%;
+    max-width: 400px;
+
 }
 
-.contacts-label {
-    font-size: 1rem;
+.contacts-form-title {
+    font-size: var(--font-size-medium);
+    color: var(--primary-color);
     margin-bottom: var(--spacing-small);
+}
+
+.contacts-form-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .contacts-input {
@@ -44,7 +62,7 @@
     border: 2px solid var(--primary-color);
     border-radius: 5px;
     margin-bottom: var(--spacing-medium);
-    width: 300px;
+    width: 100%;
     transition: border-color 0.3s ease;
 }
 
@@ -70,27 +88,40 @@
 
 .contacts-follow {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-left: 600px;
     margin-top: var(--spacing-medium);
+
 }
 
 .contacts-follow-title {
     font-size: var(--font-size-medium);
     color: var(--primary-color);
-    margin-bottom: var(--spacing-small);
+    margin-top: -160px;
+    margin-left: 100px;
+}
+
+.contacts-links {
+    display: flex;
+    gap: var(--spacing-small);
 }
 
 .contacts-link {
-    margin: 0 var(--spacing-small);
     transition: transform 0.3s ease;
+    margin-top: -110px;
+    margin-left: 10px;
 }
 
 .contacts-link:hover {
     transform: scale(1.1);
 }
 
+.contacts-icons{
+    display: flex;
+    gap: var(--spacing-small);
+    margin-left: -120px;
+}
+
 .contacts-icon {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
 }
