@@ -1,8 +1,8 @@
 import React from "react";
 import "../assets/css/features.css";
-import {Style_market} from "../assets/images/Style_market.png";	
-import {Design_contest} from "../assets/images/Design_contest.png";
-import {Style_studio} from "../assets/images/Style_studio.jpg";
+import Style_market from "../assets/images/Style_market.png";	
+import Design_contest from "../assets/images/Design_contest.png";
+import Style_studio from "../assets/images/style_studio.jpg";
 
 const ServicesSection = () => {
   return (
