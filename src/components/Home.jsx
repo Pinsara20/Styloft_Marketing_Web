@@ -1,6 +1,7 @@
 import React from "react";
 import { ReactTyped } from "react-typed";
 import "../assets/css/home.css";
+import 'animate.css';
 
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
             <div className="hero-section" id="hero-section">
                 <div className="hero-image"></div>
                 <div className="intro">
-                    <h1>Styloft</h1>
+                    <h1 className="animate__animated animate__swing">Styloft</h1> 
                     <ReactTyped
                         className="typed-text"
                         strings={["Design Your Style", "Create Your Fashion", "Inspire the World"]}
