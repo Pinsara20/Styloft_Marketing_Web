@@ -3,7 +3,7 @@ import "../assets/css/features.css";
 
 const ServicesSection = () => {
   return (
-    <section className="services-container">
+    <section className="services-container" id="services">
       {/* Service 1 */}
       <div className="service-block-1">
         <div className="service-content">
@@ -24,6 +24,7 @@ const ServicesSection = () => {
           />
         </div>
       </div>
+      
 
       {/* Service 2 */}
       <div className="service-block-1">
@@ -46,10 +47,11 @@ const ServicesSection = () => {
           </a>
         </div>
       </div>
+    
 
       {/* Service 3 */}
       <div className="service-block-2">
-        <div className="service-image">
+         <div className="service-image">
           <img
             src="src\assets\images\Design_contest.png"
             alt="Snowy mountain landscape with moon"
