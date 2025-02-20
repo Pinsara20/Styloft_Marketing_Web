@@ -6,7 +6,7 @@
   }
   
   .pricing-header h3 {
-    color: #ea7d93;
+    color: #dd808c;
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
@@ -32,6 +32,19 @@
     max-width: 1100px;
     margin: auto;
     margin-top: 2rem;
+    opacity: 0;
+    transform: scale(0.8) translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .pricing-cards.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  
+  .pricing-cards.exit {
+    opacity: 0;
+    transform: scale(0.8) translateY(50px);
   }
   
   .pricing-card {
@@ -54,9 +67,9 @@
   }
   
   .pricing-card.highlight {
-    background-color: #ea7d93;
+    background-color: #dd808c;
     color: white;
-    border: 2px solid #ea7d93;
+    border: 2px solid #dd808c;
   }
   
   .pricing-card .icon {
@@ -112,7 +125,7 @@
   
   .pricing-card.highlight button {
     background-color: white;
-    color:#ea7d93;
+    color:#dd808c;
   }
   
   .pricing-card button:hover {
@@ -120,7 +133,7 @@
   }
   
   .pricing-card:not(.highlight) button {
-    background-color: #ea7d93;
+    background-color: #dd808c;
     color: white;
   }
   
