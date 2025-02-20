@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../assets/css/reviews.css";
-import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 
 export default function Reviews() {
   const [reviews, setReviews] = useState([
@@ -24,48 +24,50 @@ export default function Reviews() {
     },
   ]);
 
-  // Modal State
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newReview, setNewReview] = useState({
     name: "",
     review: "",
-    rating: 5,
+    rating: 0, // Default to 0 stars
   });
 
-  // Open & Close Modal
   const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const closeModal = () => {
+    setNewReview({ name: "", review: "", rating: 0 }); // Reset form including stars
+    setIsModalOpen(false);
+  };
 
-  // Handle Input Change
   const handleChange = (e) => {
     setNewReview({ ...newReview, [e.target.name]: e.target.value });
   };
 
-  // Submit Review
+  // Handle Star Click for Rating Selection
+  const handleStarClick = (index) => {
+    setNewReview({ ...newReview, rating: index + 1 });
+  };
+
   const handleSubmit = () => {
-    if (newReview.name && newReview.review) {
+    if (newReview.name && newReview.review && newReview.rating > 0) {
       const newReviewData = {
         ...newReview,
         avatar: `https://randomuser.me/api/portraits/${Math.random() > 0.5 ? "men" : "women"}/${Math.floor(Math.random() * 80)}.jpg`,
-        rating: parseFloat(newReview.rating),
       };
 
-      setReviews([newReviewData, ...reviews]); // Add new review to the top
-      setNewReview({ name: "", review: "", rating: 5 }); // Reset form
+      setReviews([newReviewData, ...reviews]);
+
+      // Reset form after submission, including clearing selected stars
+      setNewReview({ name: "", review: "", rating: 0 });
       closeModal();
     }
   };
 
   return (
     <div className="reviews-section">
-      {/* Header */}
       <div className="reviews-header">
-        <h3>Customer Reviews</h3>
         <h1>What Our Clients Say</h1>
-        <p>Real feedback from our happy customers around the world.</p>
+        <p>Real feedback from our greate users around the Country.</p>
       </div>
 
-      {/* Review Cards */}
       <div className="reviews-container">
         {reviews.map((review, index) => (
           <div key={index} className="review-card">
@@ -73,23 +75,19 @@ export default function Reviews() {
             <h3 className="review-name">{review.name}</h3>
             <p className="review-text">"{review.review}"</p>
 
-            {/* Star Rating */}
             <div className="review-stars">
               {Array.from({ length: Math.floor(review.rating) }).map((_, i) => (
                 <FaStar key={i} />
               ))}
-              {review.rating % 1 !== 0 && <FaStarHalfAlt />}
             </div>
           </div>
         ))}
       </div>
 
-      {/* Add Review Button */}
       <button className="add-review-btn" onClick={openModal}>
         Add Review
       </button>
 
-      {/* Review Form Modal */}
       {isModalOpen && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -104,6 +102,7 @@ export default function Reviews() {
               onChange={handleChange}
               required
             />
+
             <textarea
               name="review"
               placeholder="Write your review..."
@@ -111,13 +110,17 @@ export default function Reviews() {
               onChange={handleChange}
               required
             />
-            <select name="rating" value={newReview.rating} onChange={handleChange}>
-              <option value="5">⭐⭐⭐⭐⭐ (5)</option>
-              <option value="4.5">⭐⭐⭐⭐✨ (4.5)</option>
-              <option value="4">⭐⭐⭐⭐ (4)</option>
-              <option value="3.5">⭐⭐⭐✨ (3.5)</option>
-              <option value="3">⭐⭐⭐ (3)</option>
-            </select>
+
+            {/* Clickable Star Rating */}
+            <div className="star-rating">
+              {Array.from({ length: 5 }).map((_, index) => (
+                <FaStar
+                  key={index}
+                  className={`star ${index < newReview.rating ? "active" : ""}`}
+                  onClick={() => handleStarClick(index)}
+                />
+              ))}
+            </div>
 
             <button className="submit-review-btn" onClick={handleSubmit}>
               Submit Review
