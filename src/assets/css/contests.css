@@ -1,6 +1,6 @@
 /* Define CSS variables for colors and spacing */
 :root {
-    --primary-color: #ff6f61;
+    --primary-color: #dd808c;
     --secondary-color: #ff3b2f;
     --font-size-large: 2.5rem;
     --font-size-medium: 1.5rem;
@@ -38,7 +38,7 @@ body {
 .contacts-form {
     display: flex;
     flex-direction: column;
-    margin-left: -850px;
+    margin-left: 0px;
     width: 100%;
     max-width: 400px;
 
@@ -86,42 +86,4 @@ body {
     background-color: var(--secondary-color);
 }
 
-.contacts-follow {
-    display: flex;
-    margin-left: 600px;
-    margin-top: var(--spacing-medium);
 
-}
-
-.contacts-follow-title {
-    font-size: var(--font-size-medium);
-    color: var(--primary-color);
-    margin-top: -160px;
-    margin-left: 100px;
-}
-
-.contacts-links {
-    display: flex;
-    gap: var(--spacing-small);
-}
-
-.contacts-link {
-    transition: transform 0.3s ease;
-    margin-top: -110px;
-    margin-left: 10px;
-}
-
-.contacts-link:hover {
-    transform: scale(1.1);
-}
-
-.contacts-icons{
-    display: flex;
-    gap: var(--spacing-small);
-    margin-left: -120px;
-}
-
-.contacts-icon {
-    width: 40px;
-    height: 40px;
-}

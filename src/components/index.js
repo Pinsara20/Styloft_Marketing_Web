@@ -5,5 +5,6 @@ import Features from "./Features";
 import Pricing from "./Pricing";
 import Reviews from "./Reviews";
 import Contacts from "./Contacts";
+import About from "./About";
 
-export { NavBar, Footer, Home, Features, Pricing, Reviews, Contacts };
+export { NavBar, Footer, Home, Features, Pricing, Reviews, Contacts, About };
