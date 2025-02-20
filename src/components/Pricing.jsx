@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { FaRocket, FaCoffee, FaBullseye } from "react-icons/fa";
 import "../assets/css/pricing.css"; // Import CSS file
 
@@ -29,7 +29,7 @@ const plans = [
       "Personalized design suggestions.",
       "Advanced analytics dashboard.",
     ],
-    highlight: true, // Special style for the middle card
+    highlight: true,
   },
   {
     title: "COMMERCIAL",
@@ -48,16 +48,45 @@ const plans = [
 ];
 
 export default function Pricing() {
+  const pricingRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            entry.target.classList.remove("exit");
+          } else {
+            entry.target.classList.remove("visible");
+            entry.target.classList.add("exit");
+          }
+        });
+      },
+      { threshold: 0.3 } // Adjust the threshold for when the animation triggers
+    );
+
+    if (pricingRef.current) {
+      observer.observe(pricingRef.current);
+    }
+
+    return () => {
+      if (pricingRef.current) {
+        observer.unobserve(pricingRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="pricing-section">
       {/* Header */}
       <div className="pricing-header">
         <h3>Our Pricing</h3>
-        <p>Choose a plan that fits your needs and start enhanment of you career today!</p>
+        <p>Choose a plan that fits your needs and start enhancing your career today!</p>
       </div>
 
       {/* Pricing Cards */}
-      <div className="pricing-cards">
+      <div ref={pricingRef} className="pricing-cards">
         {plans.map((plan, index) => (
           <div key={index} className={`pricing-card ${plan.highlight ? "highlight" : ""}`}>
             <div>{plan.icon}</div>
