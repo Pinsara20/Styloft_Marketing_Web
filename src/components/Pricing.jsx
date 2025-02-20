@@ -79,9 +79,10 @@ export default function Pricing() {
 
   return (
     <div className="pricing-section">
+      <div className="pricing-background"></div>
       {/* Header */}
       <div className="pricing-header">
-        <h3>Our Pricing</h3>
+        <h3>Choose your plan</h3>
         <p>Choose a plan that fits your needs and start enhancing your career today!</p>
       </div>
 
