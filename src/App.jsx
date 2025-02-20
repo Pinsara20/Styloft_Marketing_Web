@@ -8,8 +8,8 @@ function App() {
       <NavBar />
       <section id='home'><Home /></section>
       <section id='features'><Features /></section>
-      <section id='reviews'><Reviews /></section>
       <section id='pricing'><Pricing /></section>
+      <section id='reviews'><Reviews /></section>
       <section id='contacts'><Contacts /></section>
       <Footer />
     </Router>
