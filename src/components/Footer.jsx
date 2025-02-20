@@ -1,5 +1,7 @@
 import React from "react";
 import "../assets/css/footer.css";
+import facebook from "../assets/images/icons8-facebook-48.png";
+import instergram from "../assets/images/Instagram-logo.png";
 
 export default function Footer() {
     return (
@@ -10,10 +12,10 @@ export default function Footer() {
                 
                 <div className="contacts-icons">
                     <a href="https://www.facebook.com/share/15rfSTq2Ka/" target="_blank" rel="noopener noreferrer" className="contacts-link">
-                        <img src="src\assets\images\icons8-facebook-48.png" alt="Facebook" className="contacts-icon" />
+                        <img src={facebook} alt="Facebook" className="contacts-icon" />
                     </a>
                     <a href="https://www.instagram.com/styloft._?igsh=MXhmaHcyOWttdTNlbA==" target="_blank" rel="noopener noreferrer" className="contacts-link">
-                        <img src="src/assets/images/Instagram-logo.png" alt="Instagram" className="contacts-icon" />
+                        <img src={instergram} alt="Instagram" className="contacts-icon" />
                     </a>
                 </div>
             </div>
