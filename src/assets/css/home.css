@@ -99,7 +99,8 @@ body {
 }
 
 .sign-in-button .modern-button:hover {
-    background-color: #ff3b2f;
+    background-color: white;
+    color: #ff3b2f;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 

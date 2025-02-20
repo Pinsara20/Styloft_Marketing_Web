@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from 'react-router-dom';
-import logoLight from "../assets/images/styloft-logo.png";
+import logoLight from "../assets/images/styloft-white.png";
 import "../assets/css/navbar.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -14,7 +14,7 @@ export default function NavBar() {
     return (
         <nav className="navbar">
             <div className="navbar-logo">
-                <NavLink to="/home">
+                <NavLink to="/">
                     <img src={logoLight} alt="Logo" className="logo" />
                 </NavLink>
             </div>
