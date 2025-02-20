@@ -3,7 +3,7 @@ import "../assets/css/features.css";
 
 const ServicesSection = () => {
   return (
-    <section className="services-container">
+    <section className="services-container" id="services">
       {/* Service 1 */}
       <div className="service-block-1">
         <div className="service-content">
