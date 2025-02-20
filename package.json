@@ -1,6 +1,7 @@
 {
   "name": "styloft-markating",
   "private": true,
+  "homepage": "https://Pinsara20.github.io/Styloft_Marketing_Web",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -9,8 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "homepage": "https://Pinsara20.github.io/Styloft_Marketing_Web"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",

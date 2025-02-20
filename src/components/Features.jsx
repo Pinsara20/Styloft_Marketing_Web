@@ -1,5 +1,8 @@
 import React from "react";
 import "../assets/css/features.css";
+import {Style_market} from "../assets/images/Style_market.png";	
+import {Design_contest} from "../assets/images/Design_contest.png";
+import {Style_studio} from "../assets/images/Style_studio.jpg";
 
 const ServicesSection = () => {
   return (
@@ -19,7 +22,7 @@ const ServicesSection = () => {
         </div>
         <div className="service-image">
           <img
-            src="src\assets\images\style_studio.jpg"
+            src={Style_studio}
             alt="Misty mountain landscape"
           />
         </div>
@@ -30,7 +33,7 @@ const ServicesSection = () => {
       <div className="service-block-1">
         <div className="service-image">
           <img
-            src="src\assets\images\Style_market.png"
+            src={Style_market}
             alt="Snowy mountain landscape with moon"
           />
         </div>
@@ -53,7 +56,7 @@ const ServicesSection = () => {
       <div className="service-block-2">
          <div className="service-image">
           <img
-            src="src\assets\images\Design_contest.png"
+            src={Design_contest}
             alt="Snowy mountain landscape with moon"
           />
         </div>
