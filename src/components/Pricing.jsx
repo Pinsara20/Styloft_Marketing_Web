@@ -10,24 +10,24 @@ const plans = [
     icon: <FaRocket className="icon" />,
     features: [
       "Can explore designs.",
-      "social media access.",
-      "User acount creation.",
+      "Social media access.",
+      "User account creation.",
       "Limited access to some features.",
       "Maintain your future career.",
     ],
   },
   {
-    title: "pro users",
+    title: "PRO USERS",
     price: "$3",
     duration: "/ month",
     description: "Suggested for Professionals and students.",
     icon: <FaCoffee className="icon" />,
     features: [
-      "Somany features included.",
-      "To compet with other athletes.",
-      "Nisl netus, consequen.",
-      "Ullam elit diamlorem eum.",
-      "Litora molestias omnis.",
+      "Many advanced features.",
+      "Compete with other athletes.",
+      "Exclusive content access.",
+      "Personalized design suggestions.",
+      "Advanced analytics dashboard.",
     ],
     highlight: true, // Special style for the middle card
   },
@@ -39,10 +39,10 @@ const plans = [
     icon: <FaBullseye className="icon" />,
     features: [
       "Create your own contests.",
-      "Collaborate with professional.",
-      "Make a good deal",
-      "Ullam elit diamlorem eum.",
-      "Litora molestias omnis.",
+      "Collaborate with professionals.",
+      "Exclusive branding tools.",
+      "Enhanced marketing options.",
+      "Advanced analytics dashboard.",
     ],
   },
 ];
@@ -53,15 +53,13 @@ export default function Pricing() {
       {/* Header */}
       <div className="pricing-header">
         <h3>Our Pricing</h3>
-        <h1>Reasonable Pricing Plan</h1>
-        <p>Choose a plan that fits your needs and start scaling your prefference today!</p>
+        <p>Choose a plan that fits your needs and start enhanment of you career today!</p>
       </div>
 
       {/* Pricing Cards */}
       <div className="pricing-cards">
         {plans.map((plan, index) => (
           <div key={index} className={`pricing-card ${plan.highlight ? "highlight" : ""}`}>
-            {/* Plan Icon */}
             <div>{plan.icon}</div>
 
             {/* Plan Title */}
@@ -78,7 +76,9 @@ export default function Pricing() {
             {/* Features List */}
             <ul>
               {plan.features.map((feature, i) => (
-                <li key={i}>{feature}</li>
+                <li key={i}>
+                  <i className="bi bi-check-all feature-icon"></i> {feature}
+                </li>
               ))}
             </ul>
 
