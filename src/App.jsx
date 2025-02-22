@@ -10,6 +10,7 @@ function App() {
       <section id='features'><Features /></section>
       <section id='pricing'><Pricing /></section>
       <section id='reviews'><Reviews /></section>
+      <section id='about'><About /></section>
       <section id='contacts'><Contacts /></section>
       <Footer />
     </Router>

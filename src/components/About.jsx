@@ -1,5 +1,11 @@
 import React from "react";
 import "../assets/css/about.css";
+import Chamodya from "../assets/images/Propic.chamodya.png";	
+import Pinsara from "../assets/images/Propic.pinsara.png";
+import Thisaru from "../assets/images/Propic.thisaru.png";
+import Shayka from "../assets/images/Propic.shakya.png";
+import Hasindi from "../assets/images/Propic.hasindi.png";
+import Piyusha from "../assets/images/Propic.piyusha.png";			
 
 export default function About() {
     return (
@@ -13,28 +19,34 @@ export default function About() {
                     <h2 className="team-title">Meet Our Team</h2>
                     <div className="team-cards">
                         <div className="team-card">
-                            <h3 className="team-member-name">Developer 1</h3>
-                            <p className="team-member-role">Frontend Specialist</p>
-                        </div>
-                        <div className="team-card">
-                            <h3 className="team-member-name">Developer 2</h3>
-                            <p className="team-member-role">Backend Expert</p>
-                        </div>
-                        <div className="team-card">
-                            <h3 className="team-member-name">Developer 3</h3>
+                            <img src={Chamodya} alt="Chamodya Ganegamage" className="team-member-image" />
+                            <h3 className="team-member-name">Chamodya Ganegamage</h3>
                             <p className="team-member-role">Full Stack Developer</p>
                         </div>
                         <div className="team-card">
-                            <h3 className="team-member-name">Developer 4</h3>
-                            <p className="team-member-role">UI/UX Designer</p>
+                            <img src={Pinsara} alt="Pinsara Pasandul" className="team-member-image" />
+                            <h3 className="team-member-name">Pinsara Pasandul</h3>
+                            <p className="team-member-role">Full Stack Developer</p>
                         </div>
                         <div className="team-card">
-                            <h3 className="team-member-name">Developer 5</h3>
-                            <p className="team-member-role">DevOps Engineer</p>
+                            <img src={Thisaru} alt="Thisaru Shamal" className="team-member-image" />
+                            <h3 className="team-member-name">Thisaru Shamal</h3>
+                            <p className="team-member-role">Full Stack Developer</p>
                         </div>
                         <div className="team-card">
-                            <h3 className="team-member-name">Developer 6</h3>
-                            <p className="team-member-role">Project Manager</p>
+                            <img src={Shayka} alt="Shakya Rajapaksha" className="team-member-image" />
+                            <h3 className="team-member-name">Shakya Rajapaksha</h3>
+                            <p className="team-member-role">Full Stack Developer</p>
+                        </div>
+                        <div className="team-card">
+                            <img src={Hasindi} alt="Hasindi Enasha" className="team-member-image" />
+                            <h3 className="team-member-name">Hasindi Enasha</h3>
+                            <p className="team-member-role">Full Stack Developer</p>
+                        </div>
+                        <div className="team-card">
+                            <img src={Piyusha} alt="Piyusha Senodi" className="team-member-image" />
+                            <h3 className="team-member-name">Piyusha Senodi</h3>
+                            <p className="team-member-role">Full Stack Developer</p>
                         </div>
                     </div>
                 </div>
