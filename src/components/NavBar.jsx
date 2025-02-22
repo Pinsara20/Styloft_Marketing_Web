@@ -38,6 +38,7 @@ export default function NavBar() {
                 <li><button className="nav-link" onClick={() => scrollToSection('features')}>Features</button></li>
                 <li><button className="nav-link" onClick={() => scrollToSection('pricing')}>Pricing</button></li>
                 <li><button className="nav-link" onClick={() => scrollToSection('reviews')}>Reviews</button></li>
+                <li><button className="nav-link" onClick={() => scrollToSection('about')}>About</button></li>
             </ul>
         </nav>
     );
