@@ -36,8 +36,8 @@ export default function NavBar() {
             <ul className={`navbar-links ${isOpen ? "active" : ""}`}>
                 <li><button className="nav-link" onClick={() => scrollToSection('home')}>Home</button></li>
                 <li><button className="nav-link" onClick={() => scrollToSection('features')}>Features</button></li>
-                <li><button className="nav-link" onClick={() => scrollToSection('reviews')}>Reviews</button></li>
                 <li><button className="nav-link" onClick={() => scrollToSection('pricing')}>Pricing</button></li>
+                <li><button className="nav-link" onClick={() => scrollToSection('reviews')}>Reviews</button></li>
             </ul>
         </nav>
     );
