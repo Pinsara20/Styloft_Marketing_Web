@@ -82,7 +82,7 @@ export default function Pricing() {
       {/* Pricing Cards */}
       <div className="pricing-cards">
         {plans.map((plan, index) => (
-          <div key={index} className={`pricing-card scale-up ${plan.highlight ? "highlight" : ""}`}>
+          <div key={index} className={`pricing-card scale-up ${plan.highlight ? "highlights" : ""}`}>
 
             <div>{plan.icon}</div>
 
