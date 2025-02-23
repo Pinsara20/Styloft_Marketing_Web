@@ -32,7 +32,7 @@ export default function Footer() {
                     <a href="https://www.facebook.com/profile.php?id=61573425719039&rdid=GS4gbjCtoHpWhgoc&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15rfSTq2Ka%2F#" target="_blank" rel="noopener noreferrer">
                         <FaFacebookF className="social-logo" style={{ color: "white" }} />
                     </a>
-                    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://pinsara20.github.io/Styloft_Marketing_Web/" target="_blank" rel="noopener noreferrer">
                         <FaGoogle className="social-logo" style={{ color: "white" }} />
                     </a>
                     <a href="https://www.instagram.com/styloft._/?igsh=MXhmaHcyOWttdTNlbA%3D%3D#" target="_blank" rel="noopener noreferrer">
