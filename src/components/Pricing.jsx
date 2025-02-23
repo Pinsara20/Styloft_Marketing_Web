@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { FaRocket, FaCoffee, FaBullseye } from "react-icons/fa";
-import "../assets/css/pricing.css";
+import "../assets/css/pricing.css"; // Import CSS file
 
 const plans = [
   {
@@ -48,31 +48,38 @@ const plans = [
 ];
 
 export default function Pricing() {
-  useEffect(() => {
-    const elements = document.querySelectorAll(".scale-up");
+  const pricingRef = useRef(null);
 
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
+            entry.target.classList.remove("exit");
+          } else {
+            entry.target.classList.remove("visible");
+            entry.target.classList.add("exit");
           }
         });
       },
-      { threshold: 0.3 } // Animation triggers when 30% of the element is visible
+      { threshold: 0.3 } // Adjust the threshold for when the animation triggers
     );
 
-    elements.forEach((el) => observer.observe(el));
+    if (pricingRef.current) {
+      observer.observe(pricingRef.current);
+    }
 
     return () => {
-      elements.forEach((el) => observer.unobserve(el));
+      if (pricingRef.current) {
+        observer.unobserve(pricingRef.current);
+      }
     };
   }, []);
 
   return (
     <div className="pricing-section">
       <div className="pricing-background"></div>
-
       {/* Header */}
       <div className="pricing-header">
         <h3>Choose your plan</h3>
@@ -80,9 +87,9 @@ export default function Pricing() {
       </div>
 
       {/* Pricing Cards */}
-      <div className="pricing-cards">
+      <div ref={pricingRef} className="pricing-cards">
         {plans.map((plan, index) => (
-          <div key={index} className={`pricing-card scale-up ${plan.highlight ? "highlight" : ""}`}>
+          <div key={index} className={`pricing-card ${plan.highlight ? "highlight" : ""}`}>
             <div>{plan.icon}</div>
 
             {/* Plan Title */}

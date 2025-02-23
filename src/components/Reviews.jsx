@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../assets/css/reviews.css";
-import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 
 export default function Reviews() {
   const [reviews, setReviews] = useState([
     {
-      name: "Sarath Wijayanayake",
+      name: "John Doe",
       review: "Absolutely love the service! Highly recommended for everyone.",
       avatar: "https://randomuser.me/api/portraits/men/32.jpg",
       rating: 4.5,
     },
     {
-      name: "Ruvini Wickremasekara",
+      name: "Sarah Lee",
       review: "Very smooth experience and the customer support is amazing!",
       avatar: "https://randomuser.me/api/portraits/women/44.jpg",
       rating: 5,
     },
     {
-      name: "Mihiran Perera",
+      name: "Michael Brown",
       review: "Great platform! Helped me a lot in growing my business.",
       avatar: "https://randomuser.me/api/portraits/men/54.jpg",
       rating: 4,
@@ -28,24 +28,12 @@ export default function Reviews() {
   const [newReview, setNewReview] = useState({
     name: "",
     review: "",
-    rating: 0,
+    rating: 0, // Default to 0 stars
   });
-
-  useEffect(() => {
-    if (isModalOpen) {
-      document.body.style.overflow = "hidden"; // Prevent scrolling
-    } else {
-      document.body.style.overflow = "auto"; // Restore scrolling
-    }
-
-    return () => {
-      document.body.style.overflow = "auto"; // Cleanup on unmount
-    };
-  }, [isModalOpen]);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => {
-    setNewReview({ name: "", review: "", rating: 0 });
+    setNewReview({ name: "", review: "", rating: 0 }); // Reset form including stars
     setIsModalOpen(false);
   };
 
@@ -53,9 +41,9 @@ export default function Reviews() {
     setNewReview({ ...newReview, [e.target.name]: e.target.value });
   };
 
+  // Handle Star Click for Rating Selection
   const handleStarClick = (index) => {
-    const newRating = index + 1;
-    setNewReview({ ...newReview, rating: newRating === newReview.rating ? newRating - 0.5 : newRating });
+    setNewReview({ ...newReview, rating: index + 1 });
   };
 
   const handleSubmit = () => {
@@ -66,6 +54,9 @@ export default function Reviews() {
       };
 
       setReviews([newReviewData, ...reviews]);
+
+      // Reset form after submission, including clearing selected stars
+      setNewReview({ name: "", review: "", rating: 0 });
       closeModal();
     }
   };
@@ -74,7 +65,7 @@ export default function Reviews() {
     <div className="reviews-section">
       <div className="reviews-header">
         <h1>What Our Clients Say</h1>
-        <p>Real feedback from our great users around the country.</p>
+        <p>Real feedback from our greate users around the Country.</p>
       </div>
 
       <div className="reviews-container">
@@ -83,24 +74,26 @@ export default function Reviews() {
             <img src={review.avatar} alt={review.name} className="review-avatar" />
             <h3 className="review-name">{review.name}</h3>
             <p className="review-text">"{review.review}"</p>
+
             <div className="review-stars">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <span key={i}>
-                  {i + 0.5 === review.rating ? <FaStarHalfAlt className="star active" /> : i < review.rating ? <FaStar className="star active" /> : <FaStar className="star" />}
-                </span>
+              {Array.from({ length: Math.floor(review.rating) }).map((_, i) => (
+                <FaStar key={i} />
               ))}
             </div>
           </div>
         ))}
       </div>
 
-      <button className="add-review-btn" onClick={openModal}>Add Review</button>
+      <button className="add-review-btn" onClick={openModal}>
+        Add Review
+      </button>
 
       {isModalOpen && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <div className="modal-overlay">
+          <div className="modal-content">
             <button className="close-btn" onClick={closeModal}>✖</button>
             <h2>Add Your Review</h2>
+
             <input
               type="text"
               name="name"
@@ -109,6 +102,7 @@ export default function Reviews() {
               onChange={handleChange}
               required
             />
+
             <textarea
               name="review"
               placeholder="Write your review..."
@@ -116,20 +110,21 @@ export default function Reviews() {
               onChange={handleChange}
               required
             />
+
+            {/* Clickable Star Rating */}
             <div className="star-rating">
               {Array.from({ length: 5 }).map((_, index) => (
-                <span key={index}>
-                  {index + 0.5 === newReview.rating ? (
-                    <FaStarHalfAlt className="star active" onClick={() => handleStarClick(index)} />
-                  ) : index < newReview.rating ? (
-                    <FaStar className="star active" onClick={() => handleStarClick(index)} />
-                  ) : (
-                    <FaStar className="star" onClick={() => handleStarClick(index)} />
-                  )}
-                </span>
+                <FaStar
+                  key={index}
+                  className={`star ${index < newReview.rating ? "active" : ""}`}
+                  onClick={() => handleStarClick(index)}
+                />
               ))}
             </div>
-            <button className="submit-review-btn" onClick={handleSubmit}>Submit Review</button>
+
+            <button className="submit-review-btn" onClick={handleSubmit}>
+              Submit Review
+            </button>
           </div>
         </div>
       )}
