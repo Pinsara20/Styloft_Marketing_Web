@@ -78,11 +78,10 @@
   animation-range: entry -15% cover 50%;
 }
 
-.pricing-card.highlight {
+.pricing-card.highlights {
   background-color: #dd808c;
   color: white;
   border: 2px solid #dd808c;
-  margin-left: .1em;
 }
 
 .pricing-card:hover {
@@ -133,7 +132,7 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.pricing-card.highlight button {
+.pricing-card.highlights button {
   background-color: white;
   color: #dd808c;
 }
@@ -143,7 +142,7 @@
   transform: translateX(-50%) scale(1.1);
 }
 
-.pricing-card:not(.highlight) button {
+.pricing-card:not(.highlights) button {
   background-color: #dd808c;
   color: white;
 }
