@@ -1,90 +1,98 @@
-/* Reviews Section */
+/* Reviews.css */
+
 .reviews-section {
-  background-color: #f9f9ff;
-  padding: 4rem 1.5rem;
-  text-align: center;
-}
+    background-color: #f9f9ff;
+    padding: 4rem 1.5rem;
+    text-align: center;
+  }
+  
+  .reviews-header h3 {
+    color: #7d46e2;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .reviews-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-top: 0.5rem;
+  }
+  
+  .reviews-header p {
+    color: #555;
+    max-width: 600px;
+    margin: 0.75rem auto;
+  }
+  
+  .reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  
+  .review-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ddd;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 2em;
+  }
+  
+  .review-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .review-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+  }
+  
+  .review-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .review-text {
+    font-size: 0.95rem;
+    color: #555;
+    font-style: italic;
+    margin: 0.5rem 0;
+  }
+  
+  .review-stars {
+    color: #ffcc00;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
 
-.reviews-header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #222;
-  margin-top: 0.5rem;
-}
+  .add-review-btn {
+    background: #dd808c;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
 
-.reviews-header p {
-  color: #555;
-  max-width: 600px;
-  margin: 0.75rem auto;
-}
+  .add-review-btn:hover {
+    background: #ea7d93b7;
+  }
 
-.reviews-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: auto;
-  margin-top: 2rem;
-}
-
-.review-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border: 2px solid #ddd;
-  transition: 0.3s ease-in-out;
-  margin-bottom: 2em;
-}
-
-.review-card:hover {
-  transform: scale(1.05);
-}
-
-.review-avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin: 0 auto 1rem;
-}
-
-.review-name {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-.review-text {
-  font-size: 0.95rem;
-  color: #555;
-  font-style: italic;
-  margin: 0.5rem 0;
-}
-
-.review-stars {
-  color: #ffcc00;
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-}
-
-.add-review-btn {
-  background: #dd808c;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  margin-top: 15px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.add-review-btn:hover {
-  background: #ea7d93b7;
-}
-
-/* Modal Styling */
+  /* Modal Styling */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -95,8 +103,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
-  pointer-events: all;
 }
 
 .modal-content {
@@ -110,6 +116,7 @@
   position: relative;
 }
 
+/* Close Button */
 .close-btn {
   position: absolute;
   top: 10px;
@@ -123,7 +130,8 @@
 
 /* Input Fields */
 .modal-content input,
-.modal-content textarea {
+.modal-content textarea,
+.modal-content select {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
@@ -132,14 +140,16 @@
   font-size: 1rem;
 }
 
+/* Textarea Auto-Resize */
 .modal-content textarea {
   resize: none;
   height: 100px;
 }
 
+/* Submit Button */
 .submit-review-btn {
   width: 100%;
-  background: #dd808cca;
+  background: #7d46e2;
   color: white;
   padding: 12px;
   border: none;
@@ -151,9 +161,10 @@
 }
 
 .submit-review-btn:hover {
-  background: #dd808c;
+  background: #5e32b5;
 }
 
+/* Star Rating Container */
 .star-rating {
   display: flex;
   justify-content: center;
@@ -163,12 +174,35 @@
   cursor: pointer;
 }
 
+/* Default Star Style */
 .star {
   color: #ccc;
   transition: color 0.3s;
 }
 
+/* Highlighted Stars */
 .star.active,
 .star:hover {
+  color: #9c821c86;
+}
+
+/* Star Rating Container */
+.star-rating {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 1.8rem;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Default Star Style */
+.star {
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+/* Highlighted Stars */
+.star.active {
   color: #ffcc00;
 }
