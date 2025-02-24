@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Home, Features, Reviews, NavBar, Pricing, Footer, Contacts, About } from './components';
-import ExploreFeature from './components/ExploreFeature';
+import { Home, Features, Reviews, NavBar, Pricing, Footer, Contacts, About, ExploreFeature } from './components';
 
 function App() {
   return (
