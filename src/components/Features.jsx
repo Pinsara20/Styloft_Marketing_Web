@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../assets/css/features.css";
 import Style_market from "../assets/images/Style_market.png";	
 import Design_contest from "../assets/images/Design_contest.png";
@@ -17,9 +18,7 @@ const ServicesSection = () => {
             Whether you're a beginner or a professional, showcase your designs,
             collaborate with others, and explore new trends. Unleash your creativity and redefine fashion!
           </p>
-          <a href="#" className="contact-button">
-            EXPLORE
-          </a>
+          <Link to="/coming-soon" className="contact-button">EXPLORE</Link>
         </div>
         <div className="service-image">
           <img
@@ -46,9 +45,7 @@ const ServicesSection = () => {
             Whether you're looking for personalized designs or the latest trends, the Style Market brings 
             creativity and style together in one place.
           </p>
-          <a href="#" className="contact-button">
-            EXPLORE
-          </a>
+          <Link to="/coming-soon" className="contact-button">EXPLORE</Link>
         </div>
       </div>
     
@@ -66,9 +63,7 @@ const ServicesSection = () => {
           <p>
             Showcase your creativity, compete with the best, and win exciting rewards in our design challenges!
           </p>
-          <a href="#" className="contact-button">
-            EXPLORE
-          </a>
+          <Link to="/coming-soon" className="contact-button">EXPLORE</Link>
         </div>
       </div>
 
@@ -87,9 +82,7 @@ const ServicesSection = () => {
           collaborate on projects, participate in design challenges, and connect with like-minded creatives. Join us to 
           inspire and be inspired!
           </p>
-          <a href="#" className="contact-button">
-            EXPLORE
-          </a>
+          <Link to="/coming-soon" className="contact-button">EXPLORE</Link>
         </div>
       </div>
 
