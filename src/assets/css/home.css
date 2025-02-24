@@ -115,6 +115,32 @@ body {
 }
 
 /* Responsive Styles */
+@media (max-width: 1024px) {
+    .intro {
+        margin-left: 15%;
+        margin-bottom: 60px;
+    }
+
+    .intro h1 {
+        font-size: 5rem;
+    }
+
+    .typed-text {
+        margin-top: 50px;
+        font-size: 1.8rem;
+    }
+
+    .home-buttons {
+        margin-top: -170px;
+        margin-left: 15%;
+    }
+
+    .modern-button {
+        padding: 12px 25px;
+        font-size: 0.95rem;
+    }
+}
+
 @media (max-width: 768px) {
     .intro {
         margin-left: 10%;

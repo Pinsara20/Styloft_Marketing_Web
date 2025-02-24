@@ -69,13 +69,6 @@ const StoryCard = ({ member }) => (
 export default function TeamStories() {
     const [scrollPosition, setScrollPosition] = useState(0);
 
-    const handleScrollLeft = () => {
-        setScrollPosition(prevPosition => Math.min(prevPosition + 300, 0)); // Adjust the value as needed
-    };
-
-    const handleScrollRight = () => {
-        setScrollPosition(prevPosition => prevPosition - 300); // Adjust the value as needed
-    };
 
     return (
         <div className="team-container">
@@ -95,18 +88,6 @@ export default function TeamStories() {
                 </div>
             </div>
 
-            <div className="navigation-buttons">
-                <button className="nav-button" onClick={handleScrollLeft}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M15 18l-6-6 6-6" />
-                    </svg>
-                </button>
-                <button className="nav-button" onClick={handleScrollRight}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M9 18l6-6-6-6" />
-                    </svg>
-                </button>
-            </div>
         </div>
     );
 }

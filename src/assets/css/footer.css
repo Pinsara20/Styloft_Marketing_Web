@@ -110,3 +110,37 @@
 .scroll-to-top.show {
     display: flex;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .footer-right h2 {
+        margin-left: 0;
+    }
+
+    .highlight {
+        margin-left: 0;
+    }
+
+    .footer-email,
+    .footer-phone,
+    .footer-social-icons {
+        margin-left: 0;
+    }
+    .social-logo{
+        width: 20px;
+        margin-left: 30px;
+    }
+}

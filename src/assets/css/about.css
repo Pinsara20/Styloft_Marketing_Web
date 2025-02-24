@@ -37,6 +37,10 @@
     animation: scroll 50s linear infinite;
 }
 
+.story-cards-wrapper:hover .story-cards {
+    animation-play-state: paused;
+}
+
 @keyframes scroll {
     from {
         transform: translateX(0);
