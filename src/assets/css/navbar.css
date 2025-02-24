@@ -113,4 +113,8 @@
     .navbar-links button {
         font-size: 0.9rem;
     }
+
+    .navbar-links{
+        right: -95%;
+    }
 }
