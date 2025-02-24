@@ -3,6 +3,7 @@ import "../assets/css/features.css";
 import Style_market from "../assets/images/Style_market.png";	
 import Design_contest from "../assets/images/Design_contest.png";
 import Style_studio from "../assets/images/style_studio.jpg";
+import Style_Society from "../assets/images/Style-Society.png";
 
 const ServicesSection = () => {
   return (
@@ -70,6 +71,28 @@ const ServicesSection = () => {
           </a>
         </div>
       </div>
+
+      {/* Service 4 */}
+        <div className="service-block-1">
+        <div className="service-image">
+          <img
+            src={Style_Society}
+            alt="Snowy mountain landscape with moon"
+          />
+        </div>
+        <div className="service-content">
+          <h2>STYLE SOCIETY</h2>
+          <p>
+          The Style Society is a vibrant community for fashion enthusiasts, designers, and fashion students. Share ideas,
+          collaborate on projects, participate in design challenges, and connect with like-minded creatives. Join us to 
+          inspire and be inspired!
+          </p>
+          <a href="#" className="contact-button">
+            EXPLORE
+          </a>
+        </div>
+      </div>
+
     </section>
   );
 };
