@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from "react";
 import "../assets/css/reviews.css";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import avatarImage from "../assets/images/avatar.jpg"; // Import the static image
 
 export default function Reviews() {
   const [reviews, setReviews] = useState([
     {
       name: "Sarath Wijayanayake",
       review: "Absolutely love the service! Highly recommended for everyone.",
-      avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+      avatar: avatarImage, // Use the static image
       rating: 4.5,
     },
     {
       name: "Ruvini Wickremasekara",
       review: "Very smooth experience and the customer support is amazing!",
-      avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+      avatar: avatarImage,
       rating: 5,
     },
     {
       name: "Mihiran Perera",
       review: "Great platform! Helped me a lot in growing my business.",
-      avatar: "https://randomuser.me/api/portraits/men/54.jpg",
+      avatar: avatarImage,
       rating: 4,
     },
   ]);
@@ -62,7 +63,7 @@ export default function Reviews() {
     if (newReview.name && newReview.review && newReview.rating > 0) {
       const newReviewData = {
         ...newReview,
-        avatar: `https://randomuser.me/api/portraits/${Math.random() > 0.5 ? "men" : "women"}/${Math.floor(Math.random() * 80)}.jpg`,
+        avatar: avatarImage, // Always use the static image
       };
 
       setReviews([newReviewData, ...reviews]);
