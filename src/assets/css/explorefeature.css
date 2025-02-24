@@ -12,6 +12,16 @@
     color: white;
     overflow: hidden;
   }
+
+  .coming-soon-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.143);
+  }
   
   /* Fade-in and pop-in effect for the content */
   .coming-soon-content {
