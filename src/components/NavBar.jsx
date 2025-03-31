@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import logoLight from "../assets/images/styloft-white.png";
+import logoLight from "../assets/images/styloft-logo.png";
 import "../assets/css/navbar.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
