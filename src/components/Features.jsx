@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../assets/css/features.css";
 import Style_market from "../assets/images/Style_market.png";	
 import Design_contest from "../assets/images/Design_contest.png";
-import Style_studio from "../assets/images/style_studio.jpg";
+import Style_studio from "../assets/images/style_studio.png";
 import Style_Society from "../assets/images/Style-Society.png";
 
 const ServicesSection = () => {
@@ -18,7 +18,7 @@ const ServicesSection = () => {
             Whether you're a beginner or a professional, showcase your designs,
             collaborate with others, and explore new trends. Unleash your creativity and redefine fashion!
           </p>
-          <Link to="/coming-soon" className="contact-button">EXPLORE</Link>
+          <Link to="https://www.styloft.live" className="contact-button" target="_blank" rel="noopener noreferrer">EXPLORE</Link>
         </div>
         <div className="service-image">
           <img
@@ -45,7 +45,7 @@ const ServicesSection = () => {
             Whether you're looking for personalized designs or the latest trends, the Style Market brings 
             creativity and style together in one place.
           </p>
-          <Link to="/coming-soon" className="contact-button">EXPLORE</Link>
+          <Link to="https://www.styloft.live" className="contact-button" target="_blank" rel="noopener noreferrer">EXPLORE</Link>
         </div>
       </div>
     
@@ -63,7 +63,7 @@ const ServicesSection = () => {
           <p>
             Showcase your creativity, compete with the best, and win exciting rewards in our design challenges!
           </p>
-          <Link to="/coming-soon" className="contact-button">EXPLORE</Link>
+          <Link to="https://www.styloft.live" className="contact-button" target="_blank" rel="noopener noreferrer">EXPLORE</Link>
         </div>
       </div>
 
@@ -82,7 +82,7 @@ const ServicesSection = () => {
           collaborate on projects, participate in design challenges, and connect with like-minded creatives. Join us to 
           inspire and be inspired!
           </p>
-          <Link to="/coming-soon" className="contact-button">EXPLORE</Link>
+          <Link to="https://www.styloft.live" className="contact-button" target="_blank" rel="noopener noreferrer">EXPLORE</Link>
         </div>
       </div>
 
